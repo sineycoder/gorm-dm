@@ -73,7 +73,6 @@ func (d Dialector) Name() string {
 }
 
 func (d Dialector) Initialize(db *gorm.DB) (err error) {
-	db.NamingStrategy = Namer{Namer: utils.IfThen[schema.Namer](db.NamingStrategy == nil, schema.NamingStrategy{}, db.NamingStrategy)}
 	d.DefaultStringSize = utils.IfThen(d.DefaultStringSize == 0, 1024, d.DefaultStringSize)
 
 	callbacks.RegisterDefaultCallbacks(db, &callbacks.Config{
