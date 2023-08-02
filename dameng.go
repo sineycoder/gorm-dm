@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	_ "code.byted.org/videoarch-onpremise/dm"
+	_ "github.com/sineycoder/dm-driver"
 	"github.com/sineycoder/gorm-dm/utils"
 	"github.com/sineycoder/gorm-dm/utils/slices"
 	"gorm.io/gorm"
